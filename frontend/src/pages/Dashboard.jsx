@@ -11,7 +11,7 @@ function Dashboard() {
   const fetchTasks = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/tasks"
+        "https://task-manager-ba05.onrender.com/api/tasks"
       );
 
       setTasks(res.data);
@@ -29,7 +29,7 @@ function Dashboard() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/tasks",
+        "https://task-manager-ba05.onrender.com/api/tasks",
         {
           title,
           description,
@@ -50,7 +50,7 @@ function Dashboard() {
   const deleteTask = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/tasks/${id}`
+        `https://task-manager-ba05.onrender.com/api/tasks/${id}`
       );
 
       fetchTasks();
@@ -72,7 +72,7 @@ function Dashboard() {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/tasks/${task._id}`,
+        `https://task-manager-ba05.onrender.com/api/tasks/${task._id}`,
         {
           title: task.title,
           description: task.description,
